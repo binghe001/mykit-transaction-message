@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.mykit.transaction</groupId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>mykit-demo-dubbo</module>
+        <module>mykit-demo-motan</module>
+        <module>mykit-demo-springcloud</module>
+    </modules>
+    <artifactId>mykit-transaction-message-demo</artifactId>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.1.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+        <mykit.version>1.0.0-SNAPSHOT</mykit.version>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+        <springfox.version>2.6.1</springfox.version>
+        <rocketmq.version>4.1.0-incubating</rocketmq.version>
+        <ons.clent.version>1.7.1.Final</ons.clent.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-annotation</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-core</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-dubbo</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-motan</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-springcloud</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-jms</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-rabbitmq</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-kafka</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-rocketmq</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-aliyunmq</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-springboot-starter-dubbo</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-springboot-starter-springcloud</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-springboot-starter-motan</artifactId>
+                <version>${mykit.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-bean-validators</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
+
+            <!-- RocketMQ 客户端相关依赖 -->
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-common</artifactId>
+                <version>${rocketmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>${ons.clent.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <finalName>mykit-transaction-message-demo</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

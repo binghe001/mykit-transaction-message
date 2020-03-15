@@ -1,0 +1,1 @@
+mykitJdkProxy=io.mykit.transaction.message.rpc.dubbo.proxy.MykitJdkProxyFactory

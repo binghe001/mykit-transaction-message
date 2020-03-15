@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.mykit.transaction.message.springboot.starter.parent.configuration.MykitAutoConfiguration

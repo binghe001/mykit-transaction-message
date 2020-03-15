@@ -1,0 +1,5 @@
+io.mykit.transaction.message.core.spi.repository.FileCoordinatorRepository
+io.mykit.transaction.message.core.spi.repository.JdbcCoordinatorRepository
+io.mykit.transaction.message.core.spi.repository.MongoCoordinatorRepository
+io.mykit.transaction.message.core.spi.repository.RedisCoordinatorRepository
+io.mykit.transaction.message.core.spi.repository.ZookeeperCoordinatorRepository

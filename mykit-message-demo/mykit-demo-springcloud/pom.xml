@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mykit-transaction-message-demo</artifactId>
+        <groupId>io.mykit.transaction</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mykit-transaction-message-demo-springcloud</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>mykit-demo-springcloud-account-api</module>
+        <module>mykit-demo-springcloud-account</module>
+        <module>mykit-demo-springcloud-eureka</module>
+        <module>mykit-demo-springcloud-inventory-api</module>
+        <module>mykit-demo-springcloud-inventory</module>
+        <module>mykit-demo-springcloud-order</module>
+    </modules>
+
+    <properties>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-springcloud-order</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-springcloud-inventory</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-springcloud-inventory-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-springcloud-account</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-springcloud-account-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+</project>

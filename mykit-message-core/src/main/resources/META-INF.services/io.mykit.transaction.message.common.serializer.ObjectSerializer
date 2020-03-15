@@ -1,0 +1,4 @@
+io.mykit.transaction.message.common.serializer.KryoSerializer
+io.mykit.transaction.message.common.serializer.ProtostuffSerializer
+io.mykit.transaction.message.common.serializer.HessianSerializer
+io.mykit.transaction.message.common.serializer.JavaSerializer

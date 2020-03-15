@@ -1,0 +1,59 @@
+server:
+  port: 8082
+  address: 0.0.0.0
+  servlet:
+    context-path: /
+
+spring:
+    datasource:
+        driver-class-name:  com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/mykit_transaction_message_account?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password: root
+    #activemq:
+    #   broker-url: tcp://120.76.52.162:61616
+    #   user: happylife
+    #   password: happylifeplat01
+    #   trust-all: true
+    #rabbitmq:
+    #    host: localhost
+    #    port: 5672
+    #    username: guest
+    #    password: guest
+#    aliyunmq:
+#        broker-url: http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
+#        accessKey: LTAI44DGK0oAutoj
+#        secretKey: RBXTnPSVxHYfrn2IFFoVtgExZdw1M2
+#        topic: ORDER_FLOW_BQ
+#        consumerId: CID_ORDER_FLOW_BQ_ACCOUNT
+    rocketmq:
+            namesrvAddr: 192.168.175.100:9876
+            consumerGroupName: CID_ORDER_FLOW_BQ_ACCOUNT
+            instanceName: ORDER_FLOW_BQ_CONSUMER
+            topic: ORDER_FLOW_BQ
+    #kafka:
+      #  consumer:
+      #     bootstrap-servers: localhost:9092
+      #     group-id: test
+      #     auto-offset-reset: earliest
+      #     enable-auto-commit: true
+      #     auto-commit-interval: 100
+      #    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #     value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+mybatis:
+  type-aliases-package: io.mykit.transaction.message.demo.dubbo.account.api.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+
+logging:
+    level:
+        root: error
+        org.springframework.web: info
+        org.apache.ibatis: info
+        io.mykit.transaction.bonuspoint: info
+        io.mykit.transaction.lottery: debug
+        io.mykit.transaction: debug
+        io.netty: info
+
+    path: "./logs"
+

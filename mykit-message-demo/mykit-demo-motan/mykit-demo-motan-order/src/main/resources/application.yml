@@ -1,0 +1,31 @@
+server:
+  port: 8083
+  contextPath: /
+  address: 0.0.0.0
+
+spring:
+    motan:
+        zookeeper: 192.168.1.148:2181
+    datasource:
+        driver-class-name:  com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.1.68:3306/mykit_transaction_message_order?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: root
+
+
+mybatis:
+  type-aliases-package: io.mykit.transaction.message.demo.motan.order.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+
+logging:
+    level:
+        root: error
+        org.springframework.web: info
+        org.apache.ibatis: info
+        io.mykit.transaction.bonuspoint: info
+        io.mykit.transaction.lottery: debug
+        io.mykit.transaction: debug
+        io.netty: info
+
+    path: "./logs"
+

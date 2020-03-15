@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mykit-transaction-message-demo</artifactId>
+        <groupId>io.mykit.transaction</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mykit-transaction-message-demo-dubbo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>mykit-demo-dubbo-account</module>
+        <module>mykit-demo-dubbo-account-api</module>
+        <module>mykit-demo-dubbo-inventory</module>
+        <module>mykit-demo-dubbo-inventory-api</module>
+        <module>mykit-demo-dubbo-order</module>
+    </modules>
+
+    <properties>
+        <curator.version>4.0.1</curator.version>
+        <dubbo.version>2.6.5</dubbo.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-client</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>3.4.9</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-dubbo-order</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-dubbo-inventory</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-dubbo-inventory-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-dubbo-account</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.mykit.transaction</groupId>
+                <artifactId>mykit-transaction-message-demo-dubbo-account-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

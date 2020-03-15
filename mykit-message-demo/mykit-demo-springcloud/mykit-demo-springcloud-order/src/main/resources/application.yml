@@ -1,0 +1,92 @@
+server:
+  port: 8884
+  address: 0.0.0.0
+  servlet :
+      contextPath: /
+
+
+spring:
+    main:
+        allow-bean-definition-overriding: true
+    datasource:
+        driver-class-name:  com.mysql.jdbc.Driver
+        url: jdbc:mysql://192.168.175.100:3306/mykit_transaction_message_order?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password: root
+        initialSize: 20
+        minIdle: 20
+        maxActive: 100
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 30000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,wall,slf4j
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    application:
+      name: order-service
+
+mybatis:
+  type-aliases-package: io.mykit.transaction.message.demo.springcloud.order.entity
+  config-location: classpath:mybatis/mybatis-config.xml
+#${random.int[9000,9999]}
+eureka:
+ client:
+     serviceUrl:
+       defaultZone: http://localhost:8761/eureka/
+ instance:
+    prefer-ip-address: true
+
+org:
+   dromara:
+      myth :
+        serializer : kryo
+        needRecover: true
+        recoverDelayTime : 128
+        retryMax : 30
+        scheduledDelay : 128
+        scheduledThreadMax :  10
+        repositorySupport : db
+        mythDbConfig :
+                 driverClassName  : com.mysql.jdbc.Driver
+                 url :  jdbc:mysql://127.0.0.1:3306/mykit_transaction_message?useUnicode=true&amp;characterEncoding=utf8&useSSL=false
+                 username : root
+                 password : root
+
+       # repositorySupport : redis
+       #         hostName  : 192.168.1.68
+       #         port      :  6379
+       #         password  :
+
+
+       # repositorySupport : zookeeper
+       #         host      : 192.168.1.73:2181
+       #         sessionTimeOut      :  100000
+       #         rootPath  : /myth
+
+       # repositorySupport : mongodb
+       #       mongoDbUrl  : 192.168.1.68:27017
+       #       mongoDbName  :  youname
+       #       mongoUserName  : xiaoyu
+       #       mongoUserPwd   : 123456
+
+       # repositorySupport : file
+       #         path      : /youpath
+       #         prefix    :  youpath
+
+
+logging:
+    level:
+        root: error
+        org.springframework.web: info
+        org.apache.ibatis: info
+        io.mykit.transaction.bonuspoint: info
+        io.mykit.transaction.lottery: debug
+        io.mykit.transaction: debug
+
+
+    path: "./logs"
