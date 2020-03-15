@@ -72,7 +72,7 @@
         <springfox.version>2.6.1</springfox.version>
         <lombok.version>1.16.20</lombok.version>
         <spring-rabbit.version>1.7.4.RELEASE</spring-rabbit.version>
-        <amqp-client.version>4.0.3</amqp-client.version>
+        <amqp-client.version>4.8.0</amqp-client.version>
         <spring-amqp.version>1.7.4.RELEASE</spring-amqp.version>
         <spring-kafka.version>1.1.2.RELEASE</spring-kafka.version>
         <rocketmq.version>4.1.0-incubating</rocketmq.version>
