@@ -28,8 +28,3 @@ QQ：2711098650
 扫一扫关注冰河技术微信公众号  
 ![微信公众号](https://github.com/sunshinelyz/binghe_resources/blob/master/images/subscribe/qrcode_for_gh_0d4482676600_344.jpg)  
  
-
-
-
-
-
