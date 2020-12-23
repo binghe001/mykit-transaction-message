@@ -18,14 +18,12 @@ package io.mykit.transaction.message.core.disruptor.translator;
 import com.lmax.disruptor.EventTranslatorOneArg;
 import io.mykit.transaction.message.common.bean.entity.MykitTransaction;
 import io.mykit.transaction.message.core.disruptor.event.MykitTransactionEvent;
-import org.springframework.stereotype.Component;
 
 /**
  * @author binghe
  * @version 1.0.0
  * @description MykitTransactionEventPublisher
  */
-@Component
 public class MykitTransactionEventTranslator implements EventTranslatorOneArg<MykitTransactionEvent, MykitTransaction> {
 
     private int type;

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.mykit.transaction.message.demo.motan.account.api.service;
+package io.mykit.transaction.message.demo.dubbo.account.api.service;
 
 import io.mykit.transaction.message.annotation.MykitTransactionMessage;
-import io.mykit.transaction.message.demo.motan.account.api.dto.AccountDto;
-import io.mykit.transaction.message.demo.motan.account.api.entity.AccountDo;
+import io.mykit.transaction.message.demo.dubbo.account.api.dto.AccountDto;
+import io.mykit.transaction.message.demo.dubbo.account.api.entity.AccountDo;
 
 /**
  * @author binghe

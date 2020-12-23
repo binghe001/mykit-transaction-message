@@ -16,9 +16,9 @@
 package io.mykit.transaction.message.demo.dubbo.order.service.impl;
 
 import io.mykit.transaction.message.annotation.MykitTransactionMessage;
-import io.mykit.transaction.message.demo.motan.account.api.dto.AccountDto;
-import io.mykit.transaction.message.demo.motan.account.api.entity.AccountDo;
-import io.mykit.transaction.message.demo.motan.account.api.service.AccountService;
+import io.mykit.transaction.message.demo.dubbo.account.api.dto.AccountDto;
+import io.mykit.transaction.message.demo.dubbo.account.api.entity.AccountDo;
+import io.mykit.transaction.message.demo.dubbo.account.api.service.AccountService;
 import io.mykit.transaction.message.demo.dubbo.inventory.api.dto.InventoryDto;
 import io.mykit.transaction.message.demo.dubbo.inventory.api.entity.Inventory;
 import io.mykit.transaction.message.demo.dubbo.inventory.api.service.InventoryService;
@@ -79,6 +79,6 @@ public class PaymentServiceImpl implements PaymentService {
         inventoryDTO.setCount(order.getCount());
         inventoryDTO.setProductId(order.getProductId());
         inventoryService.decrease(inventoryDTO);
-        LOGGER.debug("=============Myth分布式事务执行完成！=======");
+        LOGGER.debug("=============mykit-transaction-message分布式事务执行完成！=======");
     }
 }

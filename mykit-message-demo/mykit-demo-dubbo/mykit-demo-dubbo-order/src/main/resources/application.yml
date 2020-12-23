@@ -1,12 +1,13 @@
 server:
   port: 8088
-  contextPath: /
   address: 0.0.0.0
+  servlet:
+    context-path: /
 
 spring:
     datasource:
         driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.175.100:3306/mykit_transaction_message_order?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://localhost:3306/mykit_transaction_message_order?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password: root
 

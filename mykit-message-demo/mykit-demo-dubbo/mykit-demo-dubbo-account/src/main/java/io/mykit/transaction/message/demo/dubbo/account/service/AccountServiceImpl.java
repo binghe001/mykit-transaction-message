@@ -16,9 +16,9 @@
 package io.mykit.transaction.message.demo.dubbo.account.service;
 
 import io.mykit.transaction.message.annotation.MykitTransactionMessage;
-import io.mykit.transaction.message.demo.motan.account.api.dto.AccountDto;
-import io.mykit.transaction.message.demo.motan.account.api.entity.AccountDo;
-import io.mykit.transaction.message.demo.motan.account.api.service.AccountService;
+import io.mykit.transaction.message.demo.dubbo.account.api.dto.AccountDto;
+import io.mykit.transaction.message.demo.dubbo.account.api.entity.AccountDo;
+import io.mykit.transaction.message.demo.dubbo.account.api.service.AccountService;
 import io.mykit.transaction.message.demo.dubbo.account.mapper.AccountMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

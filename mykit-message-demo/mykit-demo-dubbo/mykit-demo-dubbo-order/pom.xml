@@ -117,7 +117,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
+           <!-- <version>5.1.38</version>-->
         </dependency>
 
         <dependency>
@@ -136,7 +136,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
+            <!--<version>${dubbo.version}</version>-->
         </dependency>
         <!-- zkclient  -->
         <dependency>

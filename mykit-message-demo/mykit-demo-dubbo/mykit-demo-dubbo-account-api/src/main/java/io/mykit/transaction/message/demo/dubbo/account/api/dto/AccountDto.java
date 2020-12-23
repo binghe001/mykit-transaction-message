@@ -13,30 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.mykit.transaction.message.demo.motan.account.api.entity;
+package io.mykit.transaction.message.demo.dubbo.account.api.dto;
 
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * @author binghe
  * @version 1.0.0
- * @description 测试账户信息
+ * @description 测试账户扣款信息
  */
 @Data
-public class AccountDo implements Serializable {
-    private static final long serialVersionUID = 3654384943302455178L;
+public class AccountDto implements Serializable {
+    private static final long serialVersionUID = 122733363089572551L;
 
-    private Integer id;
+    /**
+     * 用户id
+     */
+    private String userId;
 
-    private Integer userId;
-
-    private BigDecimal balance;
-
-    private Date createTime;
-
-    private Date updateTime;
+    /**
+     * 扣款金额
+     */
+    private BigDecimal amount;
 }

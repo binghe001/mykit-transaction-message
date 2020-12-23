@@ -23,13 +23,17 @@ import org.springframework.context.annotation.ImportResource;
 /**
  * @author binghe
  * @version 1.0.0
- * @description
+ * @description 基于Dubbo测试订单服务
  */
 @SpringBootApplication
 @ImportResource({"classpath:applicationContext.xml"})
 @MapperScan("io.mykit.transaction.message.demo.dubbo.order.mapper")
 public class MykitDubboOrderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MykitDubboOrderApplication.class, args);
+        try{
+            SpringApplication.run(MykitDubboOrderApplication.class, args);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

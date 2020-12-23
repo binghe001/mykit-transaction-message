@@ -5,7 +5,7 @@ QQ：2711098650
 微信公众号： 冰河技术
 
 # 项目简述
-基于猫大人Myth框架演化而来的最终消息一致的分布式事务框架mykit-transaction-message，使用disruptor极大的提升了框架的性能。目前已使用到生产环境，经受住了分布式事务场景的考验。  
+基于猫大人Myth框架演化而来的最终消息一致的分布式事务框架mykit-transaction-message，站在巨人的肩膀上看的更远，使用disruptor极大的提升了框架的性能。目前已使用到生产环境，经受住了分布式事务场景的考验。  
 * 目前支持的消息中间件有：AliyunMQ、ActiveMQ、Kafka、RabbitMQ、RocketMQ。  
 * 目前支持的RPC调用方式有：Dubbo、Motan、SpringCloud（BRPC与GRPC调用方式正在开发中...）。  
 * 目前支持的SpringBoot整合方式有：Dubbo、Motan和SpringCloud。  

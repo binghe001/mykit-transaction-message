@@ -7,7 +7,7 @@ server:
 spring:
     datasource:
         driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/mykit_transaction_message_account?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://localhost:3306/mykit_transaction_message_account?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password: root
     #activemq:
@@ -27,7 +27,7 @@ spring:
 #        topic: ORDER_FLOW_BQ
 #        consumerId: CID_ORDER_FLOW_BQ_ACCOUNT
     rocketmq:
-            namesrvAddr: 192.168.175.100:9876
+            namesrvAddr: 10.31.5.61:9876
             consumerGroupName: CID_ORDER_FLOW_BQ_ACCOUNT
             instanceName: ORDER_FLOW_BQ_CONSUMER
             topic: ORDER_FLOW_BQ

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~
-  ~ Copyright 2017-2018 549477611@qq.com(xiaoyu)
-  ~
   ~ This copyrighted material is made available to anyone wishing to use, modify,
   ~ copy, or redistribute it subject to the terms and conditions of the GNU
   ~ Lesser General Public License, as published by the Free Software Foundation.
@@ -43,8 +41,7 @@
         <property name="repositorySupport" value="db"/>
         <property name="mykitTransactionMessageDbConfig">
             <bean class="io.mykit.transaction.message.common.config.MykitTransactionMessageDbConfig">
-                <property name="url"
-                          value="jdbc:mysql://127.0.0.1:3306/mykit_transaction_message?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mykit_transaction_message?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"/>
                 <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
                 <property name="username" value="root"/>
                 <property name="password" value="root"/>

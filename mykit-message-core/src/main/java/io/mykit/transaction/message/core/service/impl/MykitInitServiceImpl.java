@@ -56,7 +56,7 @@ public class MykitInitServiceImpl implements MykitInitService {
 
     @Override
     public void initialization(final MykitTransactionMessageConfig mykitTransactionMessageConfig) {
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> LOGGER.error("mykit have error!")));
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> LOGGER.error("mykit-transaction-message have error!")));
         try {
             loadSpiSupport(mykitTransactionMessageConfig);
             mykitCoordinatorService.start(mykitTransactionMessageConfig);

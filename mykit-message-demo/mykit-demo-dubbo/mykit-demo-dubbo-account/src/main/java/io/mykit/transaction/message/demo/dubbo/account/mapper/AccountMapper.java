@@ -15,7 +15,7 @@
  */
 package io.mykit.transaction.message.demo.dubbo.account.mapper;
 
-import io.mykit.transaction.message.demo.motan.account.api.entity.AccountDo;
+import io.mykit.transaction.message.demo.dubbo.account.api.entity.AccountDo;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 

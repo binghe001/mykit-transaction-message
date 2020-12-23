@@ -8,7 +8,7 @@
     <bean id="defaultMQProducer" class="org.apache.rocketmq.client.producer.DefaultMQProducer"
           init-method="start" destroy-method="shutdown">
         <constructor-arg name="producerGroup" value="producerGroup" />
-        <property name="namesrvAddr" value="192.168.175.100:9876" />
+        <property name="namesrvAddr" value="10.31.5.61:9876" />
         <property name="retryTimesWhenSendFailed" value="10" />
     </bean>
 

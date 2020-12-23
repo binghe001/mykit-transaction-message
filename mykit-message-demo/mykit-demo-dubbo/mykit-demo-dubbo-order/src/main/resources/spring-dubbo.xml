@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~
-  ~ Copyright 2017-2018 549477611@qq.com(xiaoyu)
-  ~
   ~ This copyrighted material is made available to anyone wishing to use, modify,
   ~ copy, or redistribute it subject to the terms and conditions of the GNU
   ~ Lesser General Public License, as published by the Free Software Foundation.
@@ -32,15 +30,15 @@
 
     <dubbo:protocol accesslog="true" name="dubbo" port="20886" />
 
-    <!--<dubbo:consumer proxy="mythJdkProxy"/>-->
-    <dubbo:consumer proxy="mykitTransactionMessageJdkProxy"/>
+    <!--<dubbo:consumer proxy="mykitJdkProxy"/>-->
+    <dubbo:consumer proxy="mykitJdkProxy" />
 
     <dubbo:reference timeout="10000"
                      interface="io.mykit.transaction.message.demo.dubbo.inventory.api.service.InventoryService"
                      id="inventoryService"
-                     retries="0" check="false" proxy="mythJdkProxy"/>
+                     retries="0" check="false" proxy="mykitJdkProxy"/>
     <dubbo:reference timeout="10000"
-                     interface="io.mykit.transaction.message.demo.motan.account.api.service.AccountService"
+                     interface="io.mykit.transaction.message.demo.dubbo.account.api.service.AccountService"
                      id="accountService"
-                     retries="0" check="false" proxy="mykitTransactionMessageJdkProxy"/>
+                     retries="0" check="false" proxy="mykitJdkProxy"/>
 </beans>
