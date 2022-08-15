@@ -33,7 +33,7 @@ public interface AccountService {
      * @param accountDto 参数dto
      * @return true
      */
-    @MykitTransactionMessage(destination = "ORDER_FLOW_BQ",tags = "account")
+    @MykitTransactionMessage(destination = "account")
     boolean payment(AccountDto accountDto);
 
 
