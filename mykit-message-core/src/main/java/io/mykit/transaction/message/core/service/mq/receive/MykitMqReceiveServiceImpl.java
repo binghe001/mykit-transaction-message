@@ -198,7 +198,7 @@ public class MykitMqReceiveServiceImpl implements MykitMqReceiveService {
     }
 
     /**
-     * 由于通过反射执行业务方法时，业务会抛出RuntimeException
+     * 获取异常的详情
      * @param e
      * @return
      */
