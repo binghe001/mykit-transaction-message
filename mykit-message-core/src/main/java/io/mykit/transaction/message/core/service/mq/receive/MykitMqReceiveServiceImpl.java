@@ -39,6 +39,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Objects;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -105,7 +106,7 @@ public class MykitMqReceiveServiceImpl implements MykitMqReceiveService {
                     publisher.publishEvent(log, EventTypeEnum.SAVE.getCode());
                 } catch (Exception e) {
                     //执行失败保存失败的日志
-                    final MykitTransaction log = buildTransactionLog(transId, e.getMessage(),
+                    final MykitTransaction log = buildTransactionLog(transId, getExceptionMessage(e),
                             MykitTransactionMessageStatusEnum.FAILURE.getCode(),
                             entity.getMykitTransactionMessageInvocation().getTargetClass().getName(),
                             entity.getMykitTransactionMessageInvocation().getMethodName());
@@ -132,7 +133,7 @@ public class MykitMqReceiveServiceImpl implements MykitMqReceiveService {
 
                     } catch (Throwable e) {
                         //执行失败，设置失败原因和重试次数
-                        mythTransaction.setErrorMsg(e.getMessage());
+                        mythTransaction.setErrorMsg(getExceptionMessage(e));
                         mythTransaction.setRetriedCount(mythTransaction.getRetriedCount() + 1);
                         publisher.publishEvent(mythTransaction, EventTypeEnum.UPDATE_FAIR.getCode());
                         throw new MykitRuntimeException(e);
@@ -194,5 +195,18 @@ public class MykitMqReceiveServiceImpl implements MykitMqReceiveService {
             }
         }
         return serializer;
+    }
+
+    /**
+     * 获取异常的详情
+     * @param e
+     * @return
+     */
+    private String getExceptionMessage(Throwable e) {
+        String exceptionMessage = e.getMessage();
+        if (exceptionMessage == null && e instanceof InvocationTargetException && e.getCause() != null) {
+            exceptionMessage = e.getCause().getMessage();
+        }
+        return exceptionMessage;
     }
 }
