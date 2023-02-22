@@ -1,3 +1,17 @@
+### 我是冰河
+
+- :dog: 互联资深技术专家，数据库技术专家，分布式与微服务架构专家，全网45万+粉互联网技术博主。
+- :bus: 作品：[`BingheGuide | 冰河指南`](https://github.com/binghe001/BingheGuide) | [`《深入理解高并发编程：核心原理与案例实战》`](https://github.com/binghe001/mykit-concurrent-principle) | [`《深入理解高并发编程：JDK核心技术》`](https://github.com/binghe001/mykit-concurrent-jdk) | [`数据同步`](https://github.com/binghe001/mykit-data) | [`Spring核心技术`](https://github.com/binghe001/spring-annotation-book) | [`分布式限流`](https://github.com/binghe001/mykit-ratelimiter) | [`分布式锁`](https://github.com/binghe001/mykit-lock) | [`分布式缓存`](https://github.com/binghe001/mykit-cache) | [`异步并行框架`](https://github.com/binghe001/mykit-async) | [`分布式事务`](https://github.com/binghe001/mykit-transaction-message) | [`简易版IM`](https://github.com/binghe001/mykit-chat) | [`微信SDK`](https://github.com/binghe001/mykit-wechat-sdk) | [`延迟队列`](https://github.com/binghe001/mykit-delay) | [`分布式ID`](https://github.com/binghe001/mykit-serial) | [更多搜索...](https://github.com/binghe001?tab=repositories)
+- :seedling: 干货：[公众号『 冰河技术 』](https://img-blog.csdnimg.cn/20210426115714643.jpg)
+- :pencil: 博客：[binghe.gitcode.host](https://binghe.gitcode.host/) - 硬核文章，应有尽有！
+- :tv: 视频：[B站 冰河技术](https://space.bilibili.com/517638832)
+- :love_letter: 微信：[hacker_binghe](https://binghe.gitcode.host/images/personal/hacker_binghe.jpg) - 备注来意
+- :feet: 我的知识星球：[手写企业级中间件项目、大厂高并发秒杀系统、并发编程、性能调优、框架源码、分布式、微服务、1对1解答、答辩晋升技巧、定期直播](https://binghe.gitcode.host/md/starball/2023-01-01-2023%E6%98%9F%E7%90%83%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html)
+
+### 今年的努力 ✨
+
+<img align="" height="137px" src="https://github-readme-stats.vercel.app/api?username=binghe001&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&line_height=21&bg_color=0,EC6C6C,FFD479,FFFC79,73FA79&theme=graywhite&locale=cn" /><img align="" height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=binghe001&hide_title=true&hide_border=true&layout=compact&bg_color=0,73FA79,73FDFF,D783FF&theme=graywhite&locale=cn" />
+
 # 作者及联系方式
 作者：冰河  
 微信：sun_shine_lyz  
